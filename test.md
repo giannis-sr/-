@@ -109,13 +109,37 @@ Answers ------------------------------------------------------------------------
 - Χρησιμοποιείται για **λόγους ασφαλείας** και **βελτίωσης της απόδοσης**.  
 
 ### 📝 **Παράδειγμα - Κλάση `sealed`**
-```csharp
+``csharp
 sealed class ΤελικήΚλάση
 {
     public void Εμφάνιση() => Console.WriteLine("Αυτή είναι μια sealed κλάση.");
 }
 
 // ❌ Αυτό θα προκαλέσει σφάλμα μεταγλώττισης:
-// class ΥποΚλάση : ΤελικήΚλάση { }
+// class ΥποΚλάση : ΤελικήΚλάση { } 
 
+## 🔹 Question 3: Name all the access modifiers for types
+
+Access modifiers in C# define the **visibility and accessibility** of types (classes, structs, interfaces, etc.) within an application.
+
+### ✅ **List of Access Modifiers**
+| Modifier    | Description |
+|------------|------------|
+| `public`   | The type is **accessible from anywhere**. |
+| `private`  | The type is **only accessible within the same class**. |
+| `protected` | The type is **accessible within the same class and derived classes**. |
+| `internal`  | The type is **accessible within the same assembly**. |
+| `protected internal` | The type is **accessible within the same assembly or derived classes**. |
+| `private protected` | The type is **accessible within the same class and derived classes inside the same assembly**. |
+
+---
+
+### 📝 **Examples**
+
+#### 🔹 `public` - Accessible everywhere
+```csharp
+public class MyClass
+{
+    public int Number = 10; // Accessible from anywhere
+}
 
